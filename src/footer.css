@@ -1,0 +1,15 @@
+.foot {
+    position: fixed;
+
+    bottom: 0;
+    width: 100%;
+color: white;
+
+
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+
+    background-color: midnightblue;
+
+}

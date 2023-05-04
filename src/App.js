@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import './header.css';
+import Header from './header';
+import MainContent from './mainContent';
+import './footer.css'
 import './App.css';
+import Footer from './footer';
 
 function App() {
+  const [clicked, setClicked] = useState(0);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  function handleClick() {
+    setClicked(clicked + 1);
+  }
+
+  function toggleDarkMode() {
+    setIsDarkMode(!isDarkMode);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+      <Header
+        handleClick={handleClick}
+        toggleDarkMode={toggleDarkMode}
+      />
+      <MainContent clicked={clicked}/>
+     
+      <Footer/>
     </div>
   );
 }

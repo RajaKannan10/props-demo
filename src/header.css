@@ -1,0 +1,27 @@
+.design{
+    font-size: 1.2em;
+  
+    
+    background-color:midnightblue;
+    
+    
+    text-align: center;
+    padding: 20px;
+}
+.big-button{
+    font-size: 1.2em;
+  padding: 10px 20px;
+ background-color: gold;
+ justify-content: space-between;
+ margin-right: 30px;
+ 
+}
+.secondbutton{
+  justify-content: space-between;
+  font-size: 1.2em;
+  padding: 10px 20px;
+ background-color: gold;
+ margin-left: 8px;
+
+
+}
